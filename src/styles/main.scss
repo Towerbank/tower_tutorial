@@ -1,4 +1,3 @@
-.title {
-    font-size: 92px;
-    color: blue;
-}
+@import "parts/general";
+@import "parts/header";
+@import "parts/footer";

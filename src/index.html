@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends "templates/default.html" %}
+{% set title = "Главная страница" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Документ</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
+{% block content %}
+{% include "includes/header.html" %}
 
-<body>
+<main class="main">
     <div class="container">
-        <h1 class='title'>Тайтл</h1>
-        <p>Тут был я и ты и мы</p>
+        <h1>
+            {{ title }}
+        </h1>
+        <p>
+            ТЕКСТ ЛЮБОЙ ДЛИННЫ И СОДЕРЖАНИЯ
+        </p>
     </div>
+</main>
 
-</body>
 
-</html>
+{% include "includes/footer.html" %}
+{% endblock %}

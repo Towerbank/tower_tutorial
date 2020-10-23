@@ -1,0 +1,20 @@
+{% extends "templates/default.html" %}
+{% set title = "Статья" %}
+
+{% block content %}
+{% include "includes/header.html" %}
+
+<main class="main">
+    <div class="container">
+        <h1>
+            {{ title }}
+        </h1>
+        <p>
+            ТЕКСТ ЛЮБОЙ ДЛИННЫ И СОДЕРЖАНИЯ
+        </p>
+    </div>
+</main>
+
+
+{% include "includes/footer.html" %}
+{% endblock %}
