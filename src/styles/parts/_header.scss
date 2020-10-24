@@ -5,6 +5,10 @@
   }
 }
 
+.logo {
+  text-decoration: none;
+}
+
 .nav {
   &__list {
     margin: 0 -12px;
@@ -13,7 +17,11 @@
     display: flex;
   }
 
-  &__link {
+  &__item {
     padding: 4px 12px;
+  }
+
+  &__link {
+    text-decoration: none;
   }
 }
