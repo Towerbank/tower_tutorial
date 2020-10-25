@@ -6,10 +6,12 @@ body {
   font-size: 40px;
   color: blue; }
 
-.header__wrap {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between; }
+.header {
+  background: url(../img/eto-lubov.jpg) no-repeat; }
+  .header__wrap {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between; }
 
 .logo {
   text-decoration: none;
