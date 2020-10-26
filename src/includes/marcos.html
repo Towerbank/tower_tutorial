@@ -1,9 +1,3 @@
-{% macro insertSpaces(nr_of_spaces) %}
-{% for i in range(0, nr_of_spaces) %}
-&nbsp;
-{% endfor %}
-{% endmacro %}
-
 {% macro card(title, description, src='') %}
 <div class="box__card">
   <img class="box__img" src="{{ src }}" alt="">
