@@ -6,6 +6,13 @@ body {
   font-size: 40px;
   color: blue; }
 
+.box {
+  display: grid;
+  grid-template-columns: 180px 180px 180px 180px;
+  width: 960px;
+  gap: 15px;
+  margin: 50px auto; }
+
 .header {
   background: url(../img/eto-lubov.jpg) no-repeat; }
   .header__wrap {

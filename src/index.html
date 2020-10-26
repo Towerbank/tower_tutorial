@@ -1,6 +1,8 @@
 {% extends "templates/default.html" %}
 {% set title = "Главная страница" %}
-{% from '/marco.njk' import insertSpaces %}
+
+{% from 'includes/marcos.html' import insertSpaces, project %}
+
 {% block content %}
 
 <main class="main">
@@ -18,7 +20,13 @@
       fugiat expedita quibusdam? Minima quisquam quibusdam praesentium.
     </p>
   </div>
-
+  <div class='box'>
+    {% for i in range(0, 4) %}
+    {{ project('Я-Заголовок', 'Я-Описание') }}
+    {% if not loop.last %}
+    {% endif %}
+    {% endfor %}
+  </div>
 </main>
 
 {% endblock %}

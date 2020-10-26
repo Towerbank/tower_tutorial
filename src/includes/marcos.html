@@ -1,0 +1,18 @@
+{% macro insertSpaces(nr_of_spaces) %}
+{% for i in range(0, nr_of_spaces) %}
+&nbsp;
+{% endfor %}
+{% endmacro %}
+
+{% macro project(name, description, src='https://picsum.photos/id/0/180/120') %}
+<div class="row">
+  <div class="col-md-2">
+    <img class="img-responsive" src="{{ src }}" alt="">
+  </div>
+  <div class="col-md-10">
+    <h3>{{ name }}</h3>
+    <p>{{ description }}</p>
+    <a href="#" class="btn btn-default">Подробнее</a>
+  </div>
+</div>
+{% endmacro %}
