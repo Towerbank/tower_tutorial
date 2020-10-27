@@ -10,15 +10,18 @@ var reload = browsersync.reload;
 var path = {
     src: {
         html: 'src/*.html',
-        styles: 'src/styles/*.scss'
+        styles: 'src/styles/*.scss',
+        img: 'src/img/**/*.{jpg,jpeg,png}', 
     },
     build: {
         html: 'build/',
-        styles: 'build/css/'
+        styles: 'build/css/',
+        img: 'build/img'
     },
     watch: {
         html: 'src/**/*.html',
-        styles: 'src/styles/**/*.scss'
+        styles: 'src/styles/**/*.scss',
+        img: 'src/img/**/*.*'
     },
     base: './build'
 };
@@ -53,6 +56,13 @@ function styles() {
     .pipe(reload({stream: true}));
 };
 
+function img() {
+    return gulp
+    .src(path.src.img)
+    .pipe(gulp.dest(path.build.img))
+    .pipe(reload({stream: true}));
+};
+
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.styles], styles);
@@ -60,6 +70,7 @@ function watchFiles() {
 
 gulp.task('html', html);
 gulp.task('styles', styles);
+gulp.task('img', img);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(html, styles)));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img)));
 gulp.task('watch', gulp.parallel(watchFiles, browserSync));
