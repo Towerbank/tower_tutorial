@@ -32,7 +32,12 @@
 
   <div class='box'>
     {% for item in items %}
-    {{ card(item.src, item.title, item.description) }}
+    <div class="box__card">
+      <img class="box__img" src="{{ item.src }}" alt="">
+      <h2 class='box__title'>{{ item.title }}</h2>
+      <p class='box__description'>{{ item.description|safe }}</p>
+      <a href="#" class="box__button">подробнее</a>
+    </div>
     {% endfor %}
   </div>
 
