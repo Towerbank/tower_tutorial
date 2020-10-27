@@ -11,12 +11,12 @@ var path = {
     src: {
         html: 'src/*.html',
         styles: 'src/styles/*.scss',
-        img: 'src/img/**/*.{jpg,jpeg,png}', 
+        img: 'src/img/**/*.{jpg,jpeg,png}'
     },
     build: {
         html: 'build/',
         styles: 'build/css/',
-        img: 'build/img'
+        img: 'build/img/'
     },
     watch: {
         html: 'src/**/*.html',
@@ -66,6 +66,7 @@ function img() {
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.styles], styles);
+    gulp.watch([path.watch.img], img);
 };
 
 gulp.task('html', html);
