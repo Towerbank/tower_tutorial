@@ -10,8 +10,13 @@
 }
 
 .logo {
+  display: block;
   text-decoration: none;
-  padding: 50px;
+  margin-left: 50px;
+
+  &__img {
+    border-radius: 10px;
+  }
 }
 
 .nav {

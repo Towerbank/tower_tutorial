@@ -1,6 +1,7 @@
 body {
   margin: 0 auto;
-  max-width: 1400px; }
+  max-width: 1400px;
+  box-sizing: border-box; }
 
 .title {
   font-size: 40px;
@@ -46,8 +47,11 @@ body {
     justify-content: space-between; }
 
 .logo {
+  display: block;
   text-decoration: none;
-  padding: 50px; }
+  margin-left: 50px; }
+  .logo__img {
+    border-radius: 10px; }
 
 .nav__list {
   margin: 0 -12px;
@@ -62,7 +66,8 @@ body {
   text-decoration: none; }
 
 .footer {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 50px; }
   .footer__list {
     width: 50%;
     margin: 0 auto;
