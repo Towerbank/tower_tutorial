@@ -18,21 +18,22 @@
       Какой-то такой: Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
       Consequatur at fugiat unde natus omnis dolor! Eius sapiente<br>
       fugiat expedita quibusdam? Minima quisquam quibusdam praesentium.
-      <b>первой</b>
     </p>
   </div>
 
   <div class='box'>
-    {% for i in range(0, 4) %}
-    {% if i === 0 %}
-    {{ card('Первая карточка', 'Достаточно краткое описание для первой карточки', 'https://picsum.photos/id/1073/180/120') }}
-    {% elif i === 1 %}
-    {{ card('Вторая карточка', 'Достаточно краткое описание для второй карточки', 'https://picsum.photos/id/1/180/120') }}
-    {% elif i === 2 %}
-    {{ card('Третья карточка', 'Достаточно краткое описание для третьей карточки', 'https://picsum.photos/id/1010/180/120') }}
-    {% elif i === 3 %}
-    {{ card('Четвертая карточка', 'Достаточно краткое описание для четвёртой карточки', 'https://picsum.photos/id/1058/180/120') }}
-    {% endif %}
+    {% set items = [
+      { src:'https://picsum.photos/id/1073/180/120', title:'Первая карточка', 
+      description:'Достаточно краткое описание для <b>первой</b> карточки'},
+      { src:'https://picsum.photos/id/1/180/120', title:"Вторая карточка", 
+      description:'Достаточно краткое описание для <b>второй</b> карточки'},
+      { src:'https://picsum.photos/id/1010/180/120', title: "Третья карточка", 
+      description:'Достаточно краткое описание для <b>третьей</b> карточки'},
+      { src:'https://picsum.photos/id/1058/180/120', title:"Четвертая карточка", 
+      description:'Достаточно краткое описание для <b>четвёртой</b> карточки'}
+      ] %}
+    {% for item in items %}
+    {{ card(item.src, item.title, item.description) }}
     {% endfor %}
   </div>
 
