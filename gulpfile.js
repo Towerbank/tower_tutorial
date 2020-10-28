@@ -7,7 +7,6 @@ var sass = require('gulp-sass');
 var browsersync = require('browser-sync');
 var del = require('del');
 var reload = browsersync.reload;
-var img_dest = 'build/img';
 
 var path = {
     src: {
@@ -61,7 +60,7 @@ function styles() {
 function img() {
     return gulp
     .src(path.src.img)
-    .pipe(changed(img_dest))
+    .pipe(changed(path.build.img))
     .pipe(gulp.dest(path.build.img))
     .pipe(reload({stream: true}));
 };
