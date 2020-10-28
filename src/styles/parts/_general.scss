@@ -12,7 +12,7 @@ body {
 
 .box {
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 845px;
   column-gap: 15px;
   margin: 0 auto;
