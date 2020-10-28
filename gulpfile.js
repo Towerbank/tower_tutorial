@@ -1,11 +1,13 @@
 'use strict';
 
 var gulp = require('gulp');
+var changed = require('gulp-changed');
 var nunjucks = require('gulp-nunjucks');
 var sass = require('gulp-sass');
 var browsersync = require('browser-sync');
 var del = require('del');
 var reload = browsersync.reload;
+var img_dest = '_src/img';
 
 var path = {
     src: {
@@ -21,7 +23,7 @@ var path = {
     watch: {
         html: 'src/**/*.html',
         styles: 'src/styles/**/*.scss',
-        img: 'src/img/**/*.*'
+        img: 'src/img/**/*.{jpg,jpeg,png}'
     },
     base: './build'
 };
@@ -59,6 +61,7 @@ function styles() {
 function img() {
     return gulp
     .src(path.src.img)
+    .pipe(changed(img_dest))
     .pipe(gulp.dest(path.build.img))
     .pipe(reload({stream: true}));
 };
