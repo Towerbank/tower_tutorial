@@ -19,7 +19,9 @@ body {
     background-color: #EEEEEE; }
   .box__img {
     display: block;
-    margin: 10px auto 0 auto; }
+    margin: 10px auto 0 auto;
+    width: 180px;
+    height: 120px; }
   .box__title {
     font-size: 16px;
     font-weight: bold;
@@ -74,4 +76,5 @@ body {
     justify-content: space-between;
     align-items: center; }
   .footer__link {
-    text-decoration: none; }
+    text-decoration: none;
+    color: black; }
