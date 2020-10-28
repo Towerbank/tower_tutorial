@@ -7,7 +7,7 @@ var sass = require('gulp-sass');
 var browsersync = require('browser-sync');
 var del = require('del');
 var reload = browsersync.reload;
-var img_dest = '_src/img';
+var img_dest = 'build/img';
 
 var path = {
     src: {
