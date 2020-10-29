@@ -21,23 +21,24 @@ body {
 
   &__card {
     background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
   }
 
   &__img {
     display: block;
-    margin: 10px auto 0 auto;
   }
 
   &__title {
     font-size: 16px;
     font-weight: bold;
-    margin-left: 10px;
   }
 
   &__description {
-    margin-left: 10px;
     font-size: 12px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 
   &__button {
@@ -45,7 +46,6 @@ body {
     text-align: center;
     text-transform: uppercase;
     padding: 10px 0;
-    margin: 0 10px 10px 10px;
     color: black;
     text-decoration: none;
     background-color: #C4C4C4;
