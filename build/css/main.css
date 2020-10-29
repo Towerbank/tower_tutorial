@@ -21,8 +21,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 10px; }
-  .box__img {
-    display: block; }
   .box__title {
     font-size: 16px;
     font-weight: bold; }
