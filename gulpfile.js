@@ -65,7 +65,7 @@ function img() {
     .src(path.src.img)
     .pipe(changed(path.build.img))
     .pipe(imagemin([
-        imageminMozjpeg({quality: 80, progressive: true}),
+        imageminMozjpeg({quality: 75, progressive: true}),
         imageminOptipng({optimizationLevel: 5})
     ]))
     .pipe(gulp.dest(path.build.img))

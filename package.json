@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0"
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-webp": "^6.0.0"
   }
 }
