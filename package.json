@@ -13,8 +13,12 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-nunjucks": "^5.1.0",
     "gulp-sass": "^4.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0"
+  }
 }

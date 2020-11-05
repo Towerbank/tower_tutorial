@@ -2,11 +2,14 @@
 
 var gulp = require('gulp');
 var changed = require('gulp-changed');
+var imagemin = require('gulp-imagemin');
 var nunjucks = require('gulp-nunjucks');
 var sass = require('gulp-sass');
 var browsersync = require('browser-sync');
 var del = require('del');
 var reload = browsersync.reload;
+var imageminMozjpeg = require('imagemin-mozjpeg');
+var imageminOptipng = require('imagemin-optipng');
 
 var path = {
     src: {
@@ -61,6 +64,10 @@ function img() {
     return gulp
     .src(path.src.img)
     .pipe(changed(path.build.img))
+    .pipe(imagemin([
+        imageminMozjpeg({quality: 80, progressive: true}),
+        imageminOptipng({optimizationLevel: 5})
+    ]))
     .pipe(gulp.dest(path.build.img))
     .pipe(reload({stream: true}));
 };
