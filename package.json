@@ -15,11 +15,11 @@
     "gulp-changed": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-nunjucks": "^5.1.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "gulp-webp": "^4.0.1"
   },
   "dependencies": {
     "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-webp": "^6.0.0"
+    "imagemin-optipng": "^8.0.0"
   }
 }

@@ -5,11 +5,13 @@ var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 var nunjucks = require('gulp-nunjucks');
 var sass = require('gulp-sass');
+var webp = require('gulp-webp');
 var browsersync = require('browser-sync');
 var del = require('del');
 var reload = browsersync.reload;
 var imageminMozjpeg = require('imagemin-mozjpeg');
 var imageminOptipng = require('imagemin-optipng');
+
 
 var path = {
     src: {
@@ -72,15 +74,25 @@ function img() {
     .pipe(reload({stream: true}));
 };
 
+function img_webp() {
+    return gulp
+    .src(path.src.img)
+    .pipe(changed(path.build.img))
+    .pipe(webp())
+    .pipe(gulp.dest(path.build.img))
+    .pipe(reload({stream: true}));
+};
+
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.styles], styles);
     gulp.watch([path.watch.img], img);
+    gulp.watch([path.watch.img], img_webp);
 };
 
 gulp.task('html', html);
 gulp.task('styles', styles);
 gulp.task('img', img);
-
-gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img)));
+gulp.task('img', img_webp)
+gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img, img_webp)));
 gulp.task('watch', gulp.parallel(watchFiles, browserSync));
