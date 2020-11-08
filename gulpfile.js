@@ -6,9 +6,11 @@ var imagemin = require('gulp-imagemin');
 var nunjucks = require('gulp-nunjucks');
 var sass = require('gulp-sass');
 var webp = require('gulp-webp');
+var clone = require('gulp-clone');
 var browsersync = require('browser-sync');
 var del = require('del');
 var reload = browsersync.reload;
+var imgClone = clone.sink();
 var imageminMozjpeg = require('imagemin-mozjpeg');
 var imageminOptipng = require('imagemin-optipng');
 //последние две возможно не нужны
@@ -70,15 +72,11 @@ function img() {
         imageminMozjpeg({quality: 75, progressive: true}),
         imageminOptipng({optimizationLevel: 5})
     ]))
-    .pipe(gulp.dest(path.build.img))
-    .pipe(reload({stream: true}));
-};
 
-function imgWebp() {
-    return gulp
-    .src(path.src.img)
-    .pipe(changed(path.build.img))
+    .pipe(imgClone)
     .pipe(webp())
+    .pipe(imgClone.tap())
+    
     .pipe(gulp.dest(path.build.img))
     .pipe(reload({stream: true}));
 };
@@ -87,13 +85,11 @@ function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.styles], styles);
     gulp.watch([path.watch.img], img);
-    gulp.watch([path.watch.img], imgWebp);
 };
 
 gulp.task('html', html);
 gulp.task('styles', styles);
 gulp.task('img', img);
-gulp.task('img', imgWebp);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img, imgWebp)));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img)));
 gulp.task('watch', gulp.parallel(watchFiles, browserSync));

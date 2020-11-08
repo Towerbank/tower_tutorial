@@ -13,6 +13,7 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
+    "gulp-clone": "^2.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-nunjucks": "^5.1.0",
     "gulp-sass": "^4.1.0",
