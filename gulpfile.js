@@ -11,7 +11,7 @@ var del = require('del');
 var reload = browsersync.reload;
 var imageminMozjpeg = require('imagemin-mozjpeg');
 var imageminOptipng = require('imagemin-optipng');
-
+//последние две возможно не нужны
 
 var path = {
     src: {
@@ -74,7 +74,7 @@ function img() {
     .pipe(reload({stream: true}));
 };
 
-function img_webp() {
+function imgWebp() {
     return gulp
     .src(path.src.img)
     .pipe(changed(path.build.img))
@@ -87,12 +87,13 @@ function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.styles], styles);
     gulp.watch([path.watch.img], img);
-    gulp.watch([path.watch.img], img_webp);
+    gulp.watch([path.watch.img], imgWebp);
 };
 
 gulp.task('html', html);
 gulp.task('styles', styles);
 gulp.task('img', img);
-gulp.task('img', img_webp)
-gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img, img_webp)));
+gulp.task('img', imgWebp);
+
+gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img, imgWebp)));
 gulp.task('watch', gulp.parallel(watchFiles, browserSync));
