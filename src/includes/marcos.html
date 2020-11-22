@@ -1,10 +1,23 @@
-{% macro card(srcset, src, title, description) %}
+{% set images = [
+  { srcset:'img/card-1.webp', src:'img/card-1.jpg' },
+  { srcset:'img/card-2.webp', src:'img/card-2.jpg' },
+  { srcset:'img/card-3.webp', src:'img/card-3.jpg' },
+  { srcset:'img/card-4.webp', src:'img/card-4.jpg' },
+  { srcset:'img/card-5.webp', src:'img/card-5.jpg' }
+  ] %}
+
+{% macro webpImg(srcset, src) %}
+<picture>
+  <source type="image/webp" srcset="{{ srcset }}">
+  <img class="box__img" src="{{ src }}" alt="">
+</picture>
+{% endmacro %}
+
+
+{% macro card(title, description) %}
 <div class="box__card">
   <div class="box__border">
-    <picture>
-      <source type="image/webp" srcset="{{ srcset }}">
-      <img class="box__img" src="{{ src }}" alt="">
-    </picture>
+    {{ webpImg(srcset, src) }}
   </div>
   <h2 class='box__title'>{{ title }}</h2>
   <p class='box__description'>{{ description|safe }}</p>

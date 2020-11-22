@@ -1,18 +1,20 @@
 {% extends "templates/default.html" %}
 {% set title = "Главная страница моей первой страницы" %}
 {% from 'includes/marcos.html' import card %}
+
 {% set items = [
-  { srcset:'img/card-1.webp', src:'img/card-1.jpg', title:'Первая карточка', 
+  { title:'Первая карточка', 
   description:'Достаточно краткое описание для <b>первой</b> карточки'},
-  { srcset:'img/card-5.webp', src:'img/card-5.jpg', title:"Вторая карточка", 
+  { title:"Вторая карточка", 
   description:'Достаточно краткое описание для <b>второй</b> карточки'},
-  { srcset:'img/card-3.webp', src:'img/card-3.jpg', title: "Третья карточка", 
+  { title: "Третья карточка", 
   description:'Достаточно краткое описание для <b>третьей</b> карточки'},
-  { srcset:'img/card-4.webp', src:'img/card-4.jpg', title:"Четвертая карточка", 
+  { title:"Четвертая карточка", 
   description:'Достаточно краткое описание для <b>четвёртой</b> карточки'},
-  { srcset:'img/card-2.webp', src:'img/card-2.jpg', title:"Пятая карточка", 
+  { title:"Пятая карточка", 
   description:'Достаточно краткое описание для <b>пятой</b> карточки'}
   ] %}
+
 
 {% block content %}
 
@@ -34,7 +36,7 @@
 
   <div class='box'>
     {% for item in items %}
-    {{ card(item.srcset, item.src, item.title, item.description) }}
+    {{ card(item.title, item.description) }}
     {% endfor %}
   </div>
 
