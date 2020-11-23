@@ -35,7 +35,7 @@
 
   <div class='box'>
     {% for item in items %}
-    {{ card(item.title, item.description) }}
+    {{ card(webpImg(item.src), item.title, item.description) }}
     {% endfor %}
   </div>
 

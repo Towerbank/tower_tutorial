@@ -5,10 +5,10 @@
 </picture>
 {% endmacro %}
 
-{% macro card(title, description) %}
+{% macro card(src, title, description) %}
 <div class="box__card">
   <div class="box__border">
-    {{ webpImg(item.src) }}
+    {{ webpImg(src) }}
   </div>
   <h2 class='box__title'>{{ title }}</h2>
   <p class='box__description'>{{ description|safe }}</p>
