@@ -3,15 +3,15 @@
 {% from 'includes/marcos.html' import card %}
 
 {% set items = [
-  { title:'Первая карточка', 
+  { src:'card-1', title:'Первая карточка', 
   description:'Достаточно краткое описание для <b>первой</b> карточки'},
-  { title:"Вторая карточка", 
+  { src:'card-2', title:"Вторая карточка", 
   description:'Достаточно краткое описание для <b>второй</b> карточки'},
-  { title: "Третья карточка", 
+  { src:'card-3', title: "Третья карточка", 
   description:'Достаточно краткое описание для <b>третьей</b> карточки'},
-  { title:"Четвертая карточка", 
+  { src:'card-4', title:"Четвертая карточка", 
   description:'Достаточно краткое описание для <b>четвёртой</b> карточки'},
-  { title:"Пятая карточка", 
+  { src:'card-5', title:"Пятая карточка", 
   description:'Достаточно краткое описание для <b>пятой</b> карточки'}
   ] %}
 
@@ -35,7 +35,7 @@
 
   <div class='box'>
     {% for item in items %}
-    {{ card(item.title, item.description) }}
+    {{ card(item.src, item.title, item.description) }}
     {% endfor %}
   </div>
 
