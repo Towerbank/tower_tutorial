@@ -17,7 +17,10 @@
 
 {% set images = [
  { src:'card-1'},
- { src:'card-2'}
+ { src:'card-2'},
+ { src:'card-3'},
+ { src:'card-4'},
+ { src:'card-5'}
     ] %}
 
 {% block content %}
@@ -46,7 +49,7 @@
 
   <div class='picture'>
     {% for image in images %}
-    {{ webpImg(src) }}
+    {{ webpImg(image.src) }}
     {% endfor %}
   </div>
 </main>

@@ -68,3 +68,15 @@ body {
     font-size: 10px;
   }
 }
+
+.picture {
+  display: flex;
+  justify-content: space-around;
+
+  &__img {
+    width: 200px;
+    height: 70%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+}
