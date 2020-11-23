@@ -15,13 +15,7 @@
   description:'Достаточно краткое описание для <b>пятой</b> карточки'}
   ] %}
 
-{% set images = [
- { src:'card-1'},
- { src:'card-2'},
- { src:'card-3'},
- { src:'card-4'},
- { src:'card-5'}
-    ] %}
+{% set images = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'] %}
 
 {% block content %}
 
@@ -49,7 +43,7 @@
 
   <div class='picture'>
     {% for image in images %}
-    {{ webpImg(image.src) }}
+    {{ webpImg(image) }}
     {% endfor %}
   </div>
 </main>
