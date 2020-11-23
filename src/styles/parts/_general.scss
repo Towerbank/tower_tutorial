@@ -72,11 +72,12 @@ body {
 .picture {
   display: flex;
   justify-content: space-around;
+  width: 1200px;
+  margin: 0 auto;
 
   &__img {
     width: 200px;
     height: 70%;
-    margin: 0 auto;
     object-fit: cover;
   }
 }

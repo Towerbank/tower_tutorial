@@ -54,11 +54,12 @@ body {
 
 .picture {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  width: 1200px;
+  margin: 0 auto; }
   .picture__img {
     width: 200px;
     height: 70%;
-    margin: 0 auto;
     object-fit: cover; }
 
 .header__wrap {
