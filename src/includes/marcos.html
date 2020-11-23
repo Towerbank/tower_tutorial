@@ -1,10 +1,14 @@
+{% macro webpImg(src) %}
+<picture>
+  <source type="image/webp" srcset="img/{{src}}.webp">
+  <img class="box__img" src="img/{{src}}.jpg" alt="">
+</picture>
+{% endmacro %}
+
 {% macro card(src, title, description) %}
 <div class="box__card">
   <div class="box__border">
-    <picture>
-      <source type="image/webp" srcset="img/{{src}}.webp">
-      <img class="box__img" src="img/{{src}}.jpg" alt="">
-    </picture>
+    {{ webpImg(src) }}
   </div>
   <h2 class='box__title'>{{ title }}</h2>
   <p class='box__description'>{{ description|safe }}</p>
