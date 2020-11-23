@@ -15,6 +15,11 @@
   description:'Достаточно краткое описание для <b>пятой</b> карточки'}
   ] %}
 
+{% set images = [
+ { src:'card-1'},
+ { src:'card-2'}
+    ] %}
+
 {% block content %}
 
 <main class="main">
@@ -35,10 +40,15 @@
 
   <div class='box'>
     {% for item in items %}
-    {{ card(webpImg(item.src), item.title, item.description) }}
+    {{ card(item.src, item.title, item.description) }}
     {% endfor %}
   </div>
 
+  <div class='picture'>
+    {% for image in images %}
+    {{ webpImg(src) }}
+    {% endfor %}
+  </div>
 </main>
 
 {% endblock %}
