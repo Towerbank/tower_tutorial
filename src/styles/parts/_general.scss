@@ -95,11 +95,11 @@ body {
     width: auto;
 
     @include media-down(xs) {
-      background-color: #C4C4C4;
+      background-color: chartreuse;
     }
 
     @include media-only(sm) {
-      background-color: chartreuse;
+      background-color: #C4C4C4;
     }
 
     @include media-up(sm) {
@@ -112,11 +112,11 @@ body {
     width: auto;
 
     @include media-down(xs) {
-      background-color: #FF9C9C;
+      background-color: rgb(30, 37, 22);
     }
 
     @include media-only(sm) {
-      background-color: rgb(30, 37, 22);
+      background-color: #FF9C9C;
     }
 
     @include media-up(sm) {
@@ -135,11 +135,11 @@ body {
     margin-right: 20px;
 
     @include media-down(xs) {
-      background-color: #92B9D4;
+      background-color: rgb(85, 151, 113);
     }
 
     @include media-only(sm) {
-      background-color: rgb(85, 151, 113);
+      background-color: #92B9D4;
     }
 
     @include media-up(sm) {
@@ -153,13 +153,12 @@ body {
     width: 50%;
 
     @include media-down(xs) {
-      background-color: #9BC79D;
-    }
-
-    @include media-only(sm) {
       background-color: rgb(192, 191, 135);
     }
 
+    @include media-only(sm) {
+      background-color: #9BC79D;
+    }
 
     @include media-up(sm) {
       background-color: gold;
