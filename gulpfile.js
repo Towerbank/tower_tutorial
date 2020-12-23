@@ -23,17 +23,20 @@ var path = {
     src: {
         html: 'src/*.html',
         styles: 'src/styles/*.scss',
-        img: 'src/img/**/*.{jpg,jpeg,png,svg}',
+        img: 'src/img/**/*.{jpg,jpeg,png}',
+        svg: "src/img/**/*.svg"
     },
     build: {
         html: 'build/',
         styles: 'build/css/',
         img: 'build/img/',
+        svg: "build/img/"
     },
     watch: {
         html: 'src/**/*.html',
         styles: 'src/styles/**/*.scss',
-        img: 'src/img/**/*.{jpg,jpeg,png,svg}'
+        img: 'src/img/**/*.{jpg,jpeg,png}',
+        svg: "src/img/**/*.svg"
     },
     base: './build'
 };
@@ -87,7 +90,7 @@ function img() {
 
 function svg() {
     return gulp
-    .src(path.src.img)
+    .src(path.src.svg)
     .pipe(svgmin({
         js2svg: {
             pretty: true
@@ -95,16 +98,22 @@ function svg() {
     }))  
     .pipe(cheerio({
         run: function($) {
-     $('[fill]').removeAttr('fill');
-     $('[stroke]').removeAttr('stroke');
-     $('[style]').removeAttr('style');
+ $('[fill]').removeAttr('fill');
+$('[stroke]').removeAttr('stroke');
+$('[style]').removeAttr('style');
         },
     parserOptions: { xmlMode: true }
 }))
     .pipe(replace('&gt;', '>'))
-    .pipe(svgSprite())
+    .pipe(svgSprite({
+        mode: {
+            symbol: {
+                sprite: '../sprite.svg'
+            }
+        }
+    }))
 
-  .pipe(gulp.dest(path.build.img))
+  .pipe(gulp.dest(path.build.svg))
   .pipe(reload({stream: true}));
 }
 
@@ -112,12 +121,13 @@ function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.styles], styles);
     gulp.watch([path.watch.img], img);
+    gulp.watch([path.watch.svg], svg);
 };
 
 gulp.task('html', html);
 gulp.task('styles', styles);
 gulp.task('img', img);
-gulp.task('svg', img);
+gulp.task('svg', svg);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img)));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img, svg)));
 gulp.task('watch', gulp.parallel(watchFiles, browserSync));
