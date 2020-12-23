@@ -74,16 +74,22 @@ body {
     @media (max-width: 479px) {
       .article-box__grey {
         background-color: #C4C4C4; } }
-    @media (min-width: 480px) {
+    @media (min-width: 480px) and (max-width: 767px) {
       .article-box__grey {
-        background-color: orchid; } }
+        background-color: chartreuse; } }
+    @media (min-width: 768px) {
+      .article-box__grey {
+        background-color: #3b286e; } }
   .article-box__red {
     min-height: 360px;
     width: auto; }
     @media (max-width: 479px) {
       .article-box__red {
         background-color: #FF9C9C; } }
-    @media (min-width: 480px) {
+    @media (min-width: 480px) and (max-width: 767px) {
+      .article-box__red {
+        background-color: #1e2516; } }
+    @media (min-width: 768px) {
       .article-box__red {
         background-color: peru; } }
   .article-box__two {
@@ -95,7 +101,10 @@ body {
     @media (max-width: 479px) {
       .article-box__blue {
         background-color: #92B9D4; } }
-    @media (min-width: 480px) {
+    @media (min-width: 480px) and (max-width: 767px) {
+      .article-box__blue {
+        background-color: #559771; } }
+    @media (min-width: 768px) {
       .article-box__blue {
         background-color: black; } }
   .article-box__green {
@@ -104,7 +113,10 @@ body {
     @media (max-width: 479px) {
       .article-box__green {
         background-color: #9BC79D; } }
-    @media (min-width: 480px) {
+    @media (min-width: 480px) and (max-width: 767px) {
+      .article-box__green {
+        background-color: #c0bf87; } }
+    @media (min-width: 768px) {
       .article-box__green {
         background-color: gold; } }
 
@@ -117,6 +129,8 @@ body {
   display: block;
   text-decoration: none;
   margin-left: 50px; }
+  .logo__svg {
+    color: #0a0a0f; }
   .logo__img {
     border-radius: 10px; }
 

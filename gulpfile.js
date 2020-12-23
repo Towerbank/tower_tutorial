@@ -108,10 +108,12 @@ $('[style]').removeAttr('style');
     .pipe(svgSprite({
         mode: {
             symbol: {
-                sprite: '../sprite.svg'
-            }
-        }
-    }))
+              dest: '.',
+              example: true,
+              sprite: 'main.svg'
+            },
+          }
+        }))
 
   .pipe(gulp.dest(path.build.svg))
   .pipe(reload({stream: true}));

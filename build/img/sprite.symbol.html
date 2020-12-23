@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+		<script>svg4everybody();</script>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		
+<!--
+	
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-nicubunu_Blue_flower-dims { width: 360px; height: 360px; }
+</style>
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+	
+<!--
+	
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 360 360" id="nicubunu_Blue_flower" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="aa"><stop stop-color="#fff" stop-opacity=".502" offset="0"/><stop stop-color="#fff" stop-opacity="0" offset="1"/></linearGradient></defs><path d="M178.33 32.733c-11.77.641-23.01 7.124-30.38 16.375-7.96-7.027-17.63-11.498-29.47-10.469-15.36-.367-24.42 9.114-28.68 21.469-.34-.03-.66-.133-1-.156-8.633.304-18.068.11-25.661 4.844-9.938 9.085-13.74 23.485-11.687 36.687-3.695.158-7.418.538-11.156 1.375-12.534 1.21-21.121 10.362-24.469 22.062-5.784 13.16-2.491 29.21 8.094 38.94 4.617 4.17 9.793 7.5 15.281 10.22-.699.41-1.435.76-2.125 1.18-10.106 6.73-20.563 17.35-18.844 30.54 1.951 11.49 10.873 19.1 20.531 24.87-.733 2.19-1.366 4.48-1.781 6.88-5.807 20.78 10.402 36.65 29.156 39.93 1.542 11.75 9.181 22.42 19.911 27.85 6.23 4.53 13.32 5.66 20.25 4.62.27 1.27.42 2.55.78 3.81 4.79 14.66 19.63 24.14 34.84 23.97 9.37 1.42 17.53-2.27 23.81-8.31.66 1.61 1.22 3.23 1.97 4.81 18.3 24.41 43.97 14.74 59-5 11.84 6.18 27.32 5.81 38.13-3.18 6.46-4.48 11.81-10.47 14.5-17.41 19.36 1.71 37.26-7.23 38.25-32.09-.08-.46-.24-.89-.32-1.35 1.54-.01 3.06.07 4.6-.06 15.3-1.93 27.44-14.73 30.15-29.69 5.23-14.74-3.75-28.86-15.65-37.06 12.19-8.81 16.93-25.26 12.65-39.53-.91-7.02-4.44-12.52-9.28-16.72 1.31-3.17 2.35-6.54 2.94-10.16 6.04-22.33-13.15-38.987-33.56-40.309 1.77-8.502 1.3-17.418-4.53-24.282-10.2-11.091-26.66-10.473-40.41-9-.91.094-1.77.332-2.62.532-.01-.308.04-.598.03-.907 1.07-12.546-6.38-22.658-17.28-28.062-11.91-8.061-28.28-7.721-39.75.937-1.51 1.157-2.84 2.477-4.22 3.75-4.63-4.921-9.54-9.696-16.03-11.718-2-.239-3.99-.296-5.97-.188z" fill-opacity=".251" fill-rule="evenodd"/><path d="M159.73 144.19c-16.57 24.86-48.61 32.68-76.834 32.98-22.526-.11-46.992-4.72-64.187-20.26-10.585-9.73-13.871-25.78-8.087-38.94 3.348-11.7 11.929-20.834 24.463-22.045 27.784-6.221 54.515 7.677 77.735 21.365 15.5 9.2 30.55 19.26 46.91 26.9z" fill-rule="evenodd"/><path d="M159.59 144.38c-16.58 24.85-48.61 32.68-76.838 32.97-22.526-.1-46.992-4.71-64.188-20.25-10.585-9.73-13.87-25.78-8.087-38.94 3.349-11.7 11.93-20.837 24.464-22.047 27.783-6.222 54.519 7.676 77.739 21.367 15.49 9.2 30.54 19.26 46.91 26.9z" fill-rule="evenodd"/><path d="M155.34 199.95c-1.29-22.3-18.98-42.27-40.93-46.34-27.99-6.83-58.299-.28-82.554 14.71-10.105 6.73-20.552 17.36-18.833 30.55 2.52 14.85 16.684 23.29 29.025 29.53 9.577 4.89 20.501 1.36 30.527.2 28.825-5.68 54.735-20.42 82.765-28.65z" fill-rule="evenodd"/><path d="M153.68 201.04c-1.28-22.29-18.98-42.26-40.93-46.34-27.986-6.82-58.296-.27-82.551 14.72-10.106 6.73-20.553 17.36-18.834 30.54 2.52 14.86 16.684 23.29 29.025 29.54 9.578 4.88 20.501 1.36 30.528.19 28.822-5.68 54.732-20.41 82.762-28.65z" fill-rule="evenodd"/><path d="M166.08 178.43c-9.05 44.56-45.36 86.34-91.736 92.41-23.359 3.98-49.763-14.56-42.583-40.25 5.417-31.26 39.29-45.03 67.159-49.71 22.24-4.28 44.83-.67 67.16-2.45z" fill-rule="evenodd"/><path d="M166.28 178.33c-9.05 44.55-45.36 86.34-91.73 92.4-23.359 3.99-49.763-14.56-42.583-40.25 5.417-31.26 39.29-45.03 67.163-49.7 22.24-4.29 44.83-.68 67.15-2.45z" fill-rule="evenodd"/><path d="M185.77 194.34c-26.07-13.55-57.42-4.07-80.7 10.91-20.289 12.78-39.062 31.66-44.104 55.8-2.503 15.22 6.298 30.48 19.87 37.34 12.934 9.41 29.524 4.44 40.794-5.04 28.38-21.02 40.07-55.67 56.35-85.56 2.46-4.56 5.03-9.06 7.79-13.45z" fill-rule="evenodd"/><path d="M185.58 194.39c-26.07-13.56-57.41-4.08-80.69 10.9-20.297 12.78-39.07 31.66-44.112 55.8-2.503 15.22 6.298 30.48 19.87 37.34 12.932 9.42 29.522 4.44 40.792-5.04 28.39-21.02 40.07-55.67 56.35-85.56 2.46-4.56 5.04-9.06 7.79-13.44z" fill-rule="evenodd"/><path d="M181.88 190.09c-29.39-.01-52.84 22.86-66.59 46.88-12.11 20.7-20.07 46.11-13.42 69.85 4.8 14.66 19.64 24.15 34.85 23.98 15.82 2.39 28.25-9.67 33.87-23.28 15.51-31.74 9.9-67.88 10.57-101.9.08-5.18.29-10.36.72-15.53z" fill-rule="evenodd"/><path d="M182.06 190.07c-29.38-.01-52.83 22.85-66.58 46.87-12.12 20.7-20.08 46.11-13.42 69.86 4.79 14.65 19.64 24.14 34.85 23.97 15.81 2.39 28.24-9.67 33.87-23.28 15.5-31.74 9.9-67.88 10.57-101.9.08-5.18.29-10.36.71-15.52z" fill-rule="evenodd"/><path d="M210.43 182.22c-45.34 30.17-72.44 93.58-47.93 145.07 29.16 38.89 77.11-8.68 70.74-45.81 1.82-34.81-18.2-65.57-22.81-99.26z" fill-rule="evenodd"/><path d="M210.21 183.17c-45.34 30.17-72.44 93.58-47.93 145.06 29.16 38.9 77.11-8.67 70.74-45.8 1.82-34.81-18.2-65.57-22.81-99.26z" fill-rule="evenodd"/><path d="M195.2 186.62c-19.98 16.1-22.14 44.02-17.49 66.66 5.26 25.74 17.77 51.73 40.23 66.97 12.12 8.29 29.77 8.78 41.68-1.14 10.28-7.1 17.73-18.06 16.17-30.52-.39-27.14-20.35-47.99-39.35-65.22-13.69-12.31-28.37-23.6-41.24-36.75z" fill-rule="evenodd"/><path d="M194.89 185.86c-19.99 16.09-22.14 44.01-17.49 66.65 5.26 25.74 17.77 51.73 40.22 66.97 12.13 8.29 29.78 8.79 41.69-1.13 10.27-7.11 17.73-18.07 16.17-30.53-.39-27.13-20.35-47.99-39.35-65.22-13.69-12.31-28.37-23.59-41.24-36.74z" fill-rule="evenodd"/><path d="M190.54 177.4c54.45-.9 112.76 35.91 121.81 92.21-1.92 48.57-68.4 36.64-84.24 2.45-21.26-27.62-22.24-64.31-37.57-94.66z" fill-rule="evenodd"/><path d="M190.84 176.83c54.45-.9 112.76 35.91 121.81 92.21-1.92 48.57-68.4 36.64-84.24 2.45-21.26-27.62-22.24-64.31-37.57-94.66z" fill-rule="evenodd"/><path d="M217.21 167.49c-5.58 28.85 12.42 56.21 33.4 74.27 18.03 15.82 41.46 28.45 66.04 26.42 15.3-1.92 27.43-14.7 30.15-29.66 5.35-15.08-4.14-29.57-16.43-37.68-28.23-21.24-64.77-22.59-98.05-29.7-5.07-1.06-10.12-2.25-15.11-3.65z" fill-rule="evenodd"/><path d="M217.7 167.19c-5.58 28.85 12.42 56.21 33.4 74.27 18.03 15.82 41.46 28.45 66.04 26.42 15.3-1.92 27.43-14.7 30.15-29.66 5.35-15.08-4.14-29.57-16.43-37.68-28.22-21.24-64.77-22.59-98.05-29.7-5.07-1.06-10.12-2.25-15.11-3.65z" fill-rule="evenodd"/><path d="M196.11 157.45c8.12 28.25 36.57 44.45 63.46 51.02 23.25 5.92 49.86 6.54 70.84-6.43 12.76-8.66 17.77-25.55 13.4-40.12-2.07-15.86-17.1-24.47-31.74-26.11-34.79-6.12-67.96 9.27-100.85 18.04-5 1.35-10.03 2.58-15.11 3.6z" fill-rule="evenodd"/><path d="M196.79 156.93c8.12 28.24 36.58 44.44 63.47 51.01 23.24 5.92 49.86 6.54 70.84-6.43 12.76-8.66 17.77-25.55 13.4-40.12-2.08-15.86-17.11-24.46-31.75-26.11-34.78-6.11-67.96 9.27-100.84 18.04-5 1.36-10.04 2.59-15.12 3.61z" fill-rule="evenodd"/><path d="M203.58 188.33c8.68-44.63 44.64-86.713 90.96-93.169 23.32-4.181 49.88 14.149 42.92 39.889-5.16 31.31-38.92 45.36-66.75 50.27-22.2 4.47-44.82 1.05-67.13 3.01z" fill-rule="evenodd"/><path d="M203.32 188.22c8.68-44.63 44.63-86.719 90.96-93.175 23.32-4.181 49.88 14.145 42.91 39.895-5.15 31.3-38.91 45.36-66.74 50.27-22.2 4.46-44.82 1.04-67.13 3.01z" fill-rule="evenodd"/><path d="M179.37 146.95c13.2 18.01 38.91 25.14 59.54 16.62 27.2-9.49 49.07-31.48 61.27-57.24 4.83-11.146 7.81-25.749-.81-35.881-10.19-11.091-26.66-10.468-40.41-8.994-10.7 1.106-17.95 10.006-25.73 16.438-21.1 20.442-34.82 46.897-53.86 69.057z" fill-rule="evenodd"/><path d="M179.46 146.95c13.2 18.02 38.92 25.15 59.55 16.63 27.2-9.49 49.07-31.48 61.27-57.25 4.82-11.139 7.81-25.742-.81-35.874-10.19-11.091-26.67-10.468-40.42-8.994-10.69 1.106-17.94 10.006-25.72 16.438-21.1 20.442-34.82 46.9-53.87 69.05z" fill-rule="evenodd"/><path d="M186.43 174.97c-21.46-20.79-23.38-53.71-18.58-81.528 4.16-22.138 13.11-45.372 31.49-59.484 11.48-8.658 27.86-8.997 39.76-.936 10.91 5.404 18.34 15.491 17.28 28.038 1.11 28.45-17.38 52.24-35.04 72.61-11.84 13.59-24.44 26.57-34.91 41.3z" fill-rule="evenodd"/><path d="M186.56 174.67c-21.46-20.79-23.39-53.71-18.59-81.523 4.17-22.138 13.11-45.373 31.5-59.485 11.48-8.658 27.85-8.997 39.75-.935 10.91 5.403 18.35 15.491 17.28 28.037 1.11 28.45-17.38 52.236-35.03 72.606-11.84 13.59-24.45 26.58-34.91 41.3z" fill-rule="evenodd"/><path d="M175.54 189.2c-22.53-15.57-34.56-41.91-41.17-67.69-5.92-24.265-7.19-51.382 4.76-74.084 7.9-13.701 23.97-23.347 39.96-21.441 8.54 2.659 14.57 9.946 20.44 16.282 12.52 16.676 12 39.214 7.3 58.588-6.95 30.605-22.22 58.425-31.29 88.345z" fill-rule="evenodd"/><path d="M179.21 167.14c-26.51 6.88-54.31-1.2-78.15-13.04-22.249-11.35-43.61-28.11-53-51.98-5.217-14.93-2.031-33.397 9.855-44.262 7.593-4.734 17.048-4.541 25.677-4.845 20.808 1.409 37.538 16.515 49.138 32.73 18.64 25.247 29.74 54.987 46.48 81.397z" fill-rule="evenodd"/><path d="M179.02 166.72c-26.5 6.89-54.31-1.2-78.15-13.03-22.244-11.36-43.605-28.11-52.995-51.983-5.217-14.93-2.031-33.397 9.855-44.262 7.593-4.734 17.048-4.541 25.677-4.845 20.803 1.409 37.543 16.515 49.143 32.73 18.64 25.25 29.74 54.98 46.47 81.39z" fill-rule="evenodd"/><path d="M174.47 187.89c-22.52-15.58-34.56-41.91-41.16-67.7-5.93-24.261-7.19-51.377 4.76-74.08 7.9-13.701 23.96-23.347 39.95-21.441 8.55 2.659 14.58 9.946 20.44 16.282 12.52 16.676 12.01 39.214 7.3 58.588-6.95 30.611-22.22 58.431-31.29 88.351z" fill-rule="evenodd"/><path d="M184.53 170.56c-43.69-7.27-84.88-37.74-99.986-79.984-7.619-22.605-1.368-59.614 28.726-58.894 26.83-2.334 43.16 22.778 51.46 44.75 11.86 29.988 15.07 62.478 19.8 94.128z" fill-rule="evenodd"/><path d="M184.52 170.13c-43.69-7.27-84.88-37.75-99.993-79.984-7.619-22.605-1.369-59.614 28.723-58.895 26.84-2.334 43.17 22.779 51.46 44.75 11.86 29.992 15.07 62.479 19.81 94.129z" fill-rule="evenodd"/><path d="M148.75 172.886a55.44 56.58 90 10113.152 0 55.44 56.58 90 10-113.152 0z"/><path d="M123.55 189.186a55.44 56.58 90 10113.152 0 55.44 56.58 90 10-113.152 0z" fill-rule="evenodd" fill-opacity=".251"/><path d="M120.215 184.286a55.444 56.581 90 10113.156 0 55.444 56.581 90 10-113.156 0z" fill-rule="evenodd"/><path d="M120.215 184.286a55.444 56.581 90 10113.156 0 55.444 56.581 90 10-113.156 0z" fill-rule="evenodd"/><path d="M-668.541 424.333s123.97 272.73 438.02 276.86c404.95 0 657.03-86.77 714.83-165.29-6.2 103.31 16.6 262.4 16.6 262.4l-1289.3 10.33 119.85-384.3z" fill-rule="evenodd" fill-opacity=".75"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+		
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank">support inline SVG</a> for these techniques to work.</li>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG for Everybody</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+	
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+
+				<li title="nicubunu_Blue_flower">
+					<div class="icon-box">
+						
+						<!-- nicubunu_Blue_flower -->
+						<svg class="svg-nicubunu_Blue_flower-dims">
+							<use xlink:href="#nicubunu_Blue_flower"></use>
+						</svg>
+						
+					</div>
+					<h2>nicubunu_Blue_flower</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+	
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+
+-->
+
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+				
+				<li title="nicubunu_Blue_flower">
+					<div class="icon-box">
+						
+						<!-- nicubunu_Blue_flower -->
+						<svg class="svg-nicubunu_Blue_flower-dims">
+							<use xlink:href="main.svg#nicubunu_Blue_flower"></use>
+						</svg>
+						
+					</div>
+					<h2>nicubunu_Blue_flower</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Wed, 23 Dec 2020 20:03:37 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>
