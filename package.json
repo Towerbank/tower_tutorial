@@ -13,10 +13,14 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
+    "gulp-cheerio": "^1.0.0",
     "gulp-clone": "^2.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-nunjucks": "^5.1.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^3.0.0",
     "gulp-webp": "^4.0.1"
   },
   "dependencies": {
