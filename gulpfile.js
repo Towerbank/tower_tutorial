@@ -9,6 +9,9 @@ var webp = require('gulp-webp');
 var clone = require('gulp-clone');
 var browsersync = require('browser-sync');
 var svgSprite = require('gulp-svg-sprite');
+var svgmin = require('gulp-svgmin');
+var cheerio = require('gulp-cheerio');
+var replace = require('gulp-replace');
 var del = require('del');
 var reload = browsersync.reload;
 var imgClone = clone.sink();
@@ -20,20 +23,17 @@ var path = {
     src: {
         html: 'src/*.html',
         styles: 'src/styles/*.scss',
-        img: 'src/img/**/*.{jpg,jpeg,png}',
-        svg: "src/img/svg/**/*.svg"
+        img: 'src/img/**/*.{jpg,jpeg,png,svg}',
     },
     build: {
         html: 'build/',
         styles: 'build/css/',
         img: 'build/img/',
-        svg: "build/img/svg/"
     },
     watch: {
         html: 'src/**/*.html',
         styles: 'src/styles/**/*.scss',
-        img: 'src/img/**/*.{jpg,jpeg,png}',
-        svg: "src/img/svg/**/*.svg"
+        img: 'src/img/**/*.{jpg,jpeg,png,svg}'
     },
     base: './build'
 };
@@ -87,22 +87,37 @@ function img() {
 
 function svg() {
     return gulp
-    .src(path.src.svg)
+    .src(path.src.img)
+    .pipe(svgmin({
+        js2svg: {
+            pretty: true
+        }
+    }))  
+    .pipe(cheerio({
+        run: function($) {
+     $('[fill]').removeAttr('fill');
+     $('[stroke]').removeAttr('stroke');
+     $('[style]').removeAttr('style');
+        },
+    parserOptions: { xmlMode: true }
+}))
+    .pipe(replace('&gt;', '>'))
     .pipe(svgSprite())
-  .pipe(gulp.dest('out'));
+
+  .pipe(gulp.dest(path.build.img))
+  .pipe(reload({stream: true}));
 }
 
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.styles], styles);
     gulp.watch([path.watch.img], img);
-    gulp.watch([[path.watch.svg], svg);
 };
 
 gulp.task('html', html);
 gulp.task('styles', styles);
 gulp.task('img', img);
-gulp.task('svg', svg);
+gulp.task('svg', img);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img, svg)));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, img)));
 gulp.task('watch', gulp.parallel(watchFiles, browserSync));
