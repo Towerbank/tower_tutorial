@@ -24,19 +24,19 @@ var path = {
     html: 'src/*.html',
     styles: 'src/styles/*.scss',
     img: 'src/img/**/*.{jpg,jpeg,png}',
-    svg: "src/img/**/*.svg"
+    svg: "src/img/svg/sprites/**/*.svg"
     },
   build: {
     html: 'build/',
     styles: 'build/css/',
     img: 'build/img/',
-    svg: "build/img/"
+    svg: "build/img/svg/"
     },
   watch: {
     html: 'src/**/*.html',
     styles: 'src/styles/**/*.scss',
     img: 'src/img/**/*.{jpg,jpeg,png}',
-    svg: "src/img/**/*.svg"
+    svg: "src/img/svg**/*.svg"
     },
   base: './build'
 };
