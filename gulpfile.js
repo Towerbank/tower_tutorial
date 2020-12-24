@@ -23,8 +23,8 @@ var path = {
   src: {
     html: 'src/*.html',
     styles: 'src/styles/*.scss',
-    img: 'src/img/**/*.{jpg,jpeg,png}',
-    svg: "src/img/svg/sprites/**/*.svg"
+    img: 'src/img/*.{jpg,jpeg,png,svg}',
+    svg: "src/img/svg/*.svg"
     },
   build: {
     html: 'build/',
@@ -35,8 +35,8 @@ var path = {
   watch: {
     html: 'src/**/*.html',
     styles: 'src/styles/**/*.scss',
-    img: 'src/img/**/*.{jpg,jpeg,png}',
-    svg: "src/img/svg**/*.svg"
+    img: 'src/img/*.{jpg,jpeg,png,svg}',
+    svg: "src/img/svg/*.svg"
     },
   base: './build'
 };
