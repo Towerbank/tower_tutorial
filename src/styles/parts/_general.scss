@@ -94,15 +94,23 @@ body {
     width: auto;
 
     @include media-down(xs) {
-      background-color: chartreuse;
+      background-color: rgb(185, 207, 162);
     }
 
     @include media-only(sm) {
       background-color: #C4C4C4;
     }
 
-    @include media-up(sm) {
+    @include media-only(md) {
       background-color: #3b286e;
+    }
+
+    @include media-only(lg) {
+      background-color: #5f5a6b;
+    }
+
+    @include media-up(lg) {
+      background-color: #28478a;
     }
   }
 
@@ -120,6 +128,18 @@ body {
 
     @include media-up(sm) {
       background-color: peru;
+    }
+
+    @include media-only(md) {
+      background-color: #8a7445;
+    }
+
+    @include media-only(lg) {
+      background-color: #819983;
+    }
+
+    @include media-up(lg) {
+      background-color: #aa4098;
     }
 
   }
@@ -145,6 +165,18 @@ body {
       background-color: black;
     }
 
+    @include media-only(md) {
+      background-color: #502413;
+    }
+
+    @include media-only(lg) {
+      background-color: #db4002;
+    }
+
+    @include media-up(lg) {
+      background-color: #861212;
+    }
+
   }
 
   &__green {
@@ -161,6 +193,18 @@ body {
 
     @include media-up(sm) {
       background-color: gold;
+    }
+
+    @include media-only(md) {
+      background-color: #817a14;
+    }
+
+    @include media-only(lg) {
+      background-color: #0bc7a8;
+    }
+
+    @include media-up(lg) {
+      background-color: #4d0416;
     }
 
   }
